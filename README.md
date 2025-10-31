@@ -1,6 +1,8 @@
-#Closet
+# Wardrobe
 
-Nora Reese, October 26, 2025
-v 0.0.0
+<p><b>v0.0.0
+</b></p>
 
-Closet is a webapp developed as part of a team solution to a class project for ENGR-1413 at OU, in partnership with the OU Career Closet, aimed at improving inventory tracking and telemetry during their events.
+*Last updated 31 October, 2025*
+
+Wardrobe is a webapp developed as part of a team solution to a class project for ENGR-1413 at OU, in partnership with the OU Career Closet, aimed at improving inventory tracking and telemetry during their events.
