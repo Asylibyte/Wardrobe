@@ -15,6 +15,16 @@
     Print Button:
         Call print logic function
 -->
+<label>Item Type:</label>
+<input type="text" @bind="item_type">
+
+<label>Item Size:</label>
+<input type="text" @bind="item_size">
+
+<label>Item Gender:</label>
+<input type="text" @bind="item_gender">
+
+<button class="btn btn-primary" @onclick="DataSubmission">Submit</button>
 
 @code {
 /** TODO
@@ -28,4 +38,14 @@
     }
 
 **/
+
+    private string item_type = "";
+    private string item_size = "";
+    private string item_gender = "";
+
+    public void DataSubmission() {
+        // Submit data to database
+        // Print tag for item, look at API for whatever printer team decides to use
+        Shared.AddNewItem(item_type,item_size,item_gender);
+    }
 }

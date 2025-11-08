@@ -1,5 +1,25 @@
 ﻿@page "/"
+@using System.Threading.Tasks
 
 <PageTitle>Wardrobe</PageTitle>
 
 <h1>Wardrobe</h1>
+
+<!--TODO-->
+<!--
+    Frontend design / aesthetics
+    Explanation of how to use?
+    Button to download the database as a .csv? (also accessible simply from knowing where it is but this is probably easier for people anyway)
+
+
+-->
+@if (!Shared.dbStatus.Equals("initialized")) {
+    InitDB();
+}
+
+@code {
+    public void InitDB() {
+        Shared.CheckDatabase();
+        Console.WriteLine("Success");
+    }
+}
