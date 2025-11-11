@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "LsSy2YWtFvY=",
+  "dgSpecHash": "+4Wms+0e5uE=",
   "success": true,
   "projectFilePath": "c:\\Users\\Admin\\Documents\\SoftwareDev\\Wardrobe\\Wardrobe\\Wardrobe\\Wardrobe.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\netstandardbarcode\\1.0.2\\netstandardbarcode.1.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

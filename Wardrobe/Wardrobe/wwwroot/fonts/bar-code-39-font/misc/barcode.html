@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Dokumentation Barcode Schriftarten</title>
+<meta name="author" content="Martin Weber">
+<meta name="description" content="Barcode Schriftarten - Scanner-lesbare Schriften f&uuml;r Windows (TTF)">
+<meta name="keywords" content="Barcode,Scanner,Schrift,Code39,Codabar,Schriftart,Fonts,Windows,TTF,Truetype">
+<link rel="stylesheet" href="http://www.mw-seite.de/stil/weber.css" type="text/css">
+</head>
+<body>
+<div align="center">
+	<table width="90%" class="hob" cellpadding="10" cellspacing="0" border="0">
+		<tr><th class="hob"><span class="groesser">Dokumentation Barcode Schriftarten</span></th></tr>
+		<tr>
+			<td>
+				Siehe auch: <a href="http://www.mw-seite.de/hobbies/eancheck.htm">Berechnung der Pr&uuml;fziffer</a>, <a href="http://www.mw-seite.de/hobbies/eanprenr.htm">EAN-Pr&auml;fix-Nummern</a>
+				<p><span class="groesser">Verwendung:</span>
+				<p>Jeder Klarschrifttext (mit normalen Buchstaben geschrieben), der mit irgendeiner zur Verf&uuml;gung stehender <em>'Windows'</em>-Schriftart (<b>T</b>rue <b>T</b>ype <b>F</b>ont d.h. *.TTF) erstellt wurde, kann in
+				gewohnt einfacher Weise in die Scanner-lesbaren Schriften<em>'Code 39' und 'Codabar'</em> (Download inclusive dieser HTML-Dokumentation <a href="http://www.mw-seite.de/hobbies/download/barcode.zip">hier</a>) umgewandelt werden.</p>
+				<p>
+				Wenn mit einem Textverarbeitungsprogramm wie Word gearbeit wird, muss beachtet werden, dass die Autoformatierung ausgeschaltet ist oder diese dann gleich wieder manuell r&uuml;ckg&auml;ngig gemacht wird (mit Tastenkombination <b>Strg+Z</b> oder Men&uuml; <b>Bearbeiten>R&uuml;ckg&auml;ngig: AutoFormat</b>), denn diese formatiert eine Zeichenfolge, die mit Sternchen beginnt und endet bei der Eingabe automatisch in Fettschrift (dann aber ohne Sternchen) z.B. wird die Folge *124356* zu <b>123456</b> umgewandelt, was der Scanner aber wegen der fehlenden Start- und Stopzeichen dann nicht mehr interpretieren kann!
+				</p>
+				Die notwendige Schriftartgr&ouml;&szlig;e ist abh&auml;ngig von der Druckeraufl&ouml;sung. Ich hatte bei einer Aufl&ouml;sung von 300 dpi mit Schriftgr&ouml;&szlig;e 18 und bei einer Aufl&ouml;sung von 600 dpi mit Schriftgr&ouml;&szlig;e 12 keine Probleme, den Barcode mit Scanner zu lesen. Entscheidend d&uuml;rfete sein, dass die Zwischenr&auml;ume zwischen den einzelnen Balken noch deutlich zu erkennen sind:
+				<p>
+				<div align="left"><script language="JavaScript"><!--
+				Verweise();
+				//-->
+				</script></div>
+				</p>
+				<li><b><u>Codabar</u></b><br /><ul>Mit dieserSchriftart k&ouml;nnen nur Zahlen dargestellt werden. Start- und Stoppzeichen ist '*'</ul>
+				<li><b><u>Code 39</u></b><br /><ul>Damit der Code mit einem Scanner eindeutig identifiziert werden kann, muss er durch ein besonderes Start- bzw. Stoppzeichen markiert werden, das die Leserichtung kennzeichnet.<br />
+				Dabei handelt es sich um das Zeichen <img src="bc_start.gif" alt="| |||">, das im Klartext dem Anf&uuml;hrungszeichen (&quot;) oder dem Sternchen (*) entspricht. Es muss am Anfang und am Ende der darzustellenden Zeichenfolge verwendet werden (Ein Anf&uuml;hrungszeichen im Text w&uuml;rde der Scanner als * lesen und einen Fehler verursachen).
+				<p>Die Codefolge <img src="bc_abcd.gif" alt="||| || |||| |"> wird dadurch erzeugt, dass man die Folge <u>&quot;abcdefgh&quot;</u> (Anf&uuml;hrungszeichen eingeschlossen!) oder <u>*abcdefgh*</u> markiert und wie &uuml;blich &uuml;ber die Schriftauswahl umwandelt.
+				<p>Dabei k&ouml;nnen alle Buchstaben, Ziffern und einige Sonderzeichen der Tastatur verwendet werden:<br />
+				<span class="groesser">ABCDEFGHIJKLMNOPQRSTUVW 1234567890 $%/+.-</span><br />
+				<span class="groesser">&Auml;, &Ouml;, &Uuml;</sapn> und <span class="groesser">&szlig;</span> werden automatisch in AE, OE, UE und SS umgewandelt. Andere diakritische Zeichen (&Aacute;, &Acirc;, &Agrave;, ....) des erweiterten lateinischen Zeichensatzes (Latin-1 ISO8859-1) sind durch den Basis-Buchstaben selbst dargestellt.<br>
+				&Auml;, &Ouml;, &Uuml;</span> und <span class="groesser">&szlig;</span> werden automatisch in AE, OE, UE und SS umgewandelt.<br />
+				<span class="kleiner">(Achtung: Gro&szlig;- und Kleinschreibung wird in 'Code 39' nicht unterschieden)</span>.
+				<p>Obwohl <u>das Leerzeichen</u> <img src="bc_leer.gif" alt="|| ||"> theoretisch zur Verf&uuml;gung steht, <u>darf</u> es aus windows-technischen Gr&uuml;nden <u>nur &uuml;ber einen Umweg dargestellt werden:</u><br />
+				Die Sonderzeichen <u><span class="groesser">!&sect;&amp;?;:#@&micro;\</span></u> sind eigentlich nicht erlaubt, werden jedoch vorsichtshalber wegen ihrer leichten Verf&uuml;gbarkeit auf der Tastatur als Leerzeichen interpretiert. Wenn man beispielsweise m&ouml;chte, dass der Scanner <u>EIN TEST</u> liest, k&ouml;nnte man die Folge <u>*Ein!Test*</u> verwenden.<br />
+				<b><u>Alle anderen Zeichen werden fehlerhaft dargestellt!!</u></b> <span class="kleiner"><br />
+				(<i>Hinweis:</i> Die Version vor dem 03.03.2006 enthielt einen Fehler; das Minus-Zeichen wurde als Leerzeichen dargestellt und in einer sp&auml;teren Version das Leerzeichen vom Scanner als 1 interpretiert)</span><br />
+				</ul></li>
+				</li>
+				Weitere Hinweise in den <a href="http://www.mw-seite.de/hobbies/bc_faq.htm">FAQ</a>.
+			</td>
+		</tr>
+	</table>
+	</div>
+	<br />
+	<span style="color:#FFFFD0">Siehe auch <a href="http://www.runterladen.de/download/9191.html" target="_blank"><img src="runterladen.gif" width="80" height="30" border="0" alt="runterladen.de"></a>
+	</span></a>
+	<br />
+</body>
+</html>

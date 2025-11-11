@@ -2,6 +2,11 @@ html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+@font-face {
+    font-family: 'BarCode39-Z7DZ';
+    src: url('./fonts/bar-code-39-font/BarCode39-Z7DZ.ttf');
+}
+
 a, .btn-link {
     color: #006bb7;
 }

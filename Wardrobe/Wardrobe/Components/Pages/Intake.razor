@@ -3,7 +3,9 @@
 
 <PageTitle>Intake</PageTitle>
 
-<h1>Clothing Intake</h1>
+<p class="title"><b>Intake</b></p>
+<hr/>
+<br/>
 
 <!--TODO-->
 <!--
@@ -11,9 +13,6 @@
         Item type (dropdown menu?)
         Size (have allow for numbers and letters, also allow empty inputs)
         ...
-
-    Print Button:
-        Call print logic function
 -->
 <label>Item Type:</label>
 <input type="text" @bind="item_type">
@@ -25,6 +24,38 @@
 <input type="text" @bind="item_gender">
 
 <button class="btn btn-primary" @onclick="DataSubmission">Submit</button>
+
+<label class="barcode">@barcode</label>
+
+<style>
+hr {
+    border-top: 5px solid #000;
+    opacity: 1;
+    width: 80%;
+    margin: auto;
+}
+
+.title {
+    font-size: 70px;
+    font-family: 'Courier New', monospace;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Courier New', monospace;
+}
+
+.content {
+    text-align: center;
+}
+
+.barcode {
+    font-weight: normal;
+    font-family: 'BarCode39-Z7DZ', 'Comic Sans MS';
+    font-size: 32px
+    font-stretch: condensed;
+}
+</style>
 
 @code {
 /** TODO
@@ -42,10 +73,18 @@
     private string item_type = "";
     private string item_size = "";
     private string item_gender = "";
+    private string barcode = "";
 
     public void DataSubmission() {
         // Submit data to database
         // Print tag for item, look at API for whatever printer team decides to use
-        Shared.AddNewItem(item_type,item_size,item_gender);
+        string ItemID = Shared.AddNewItem(item_type,item_size,item_gender);
+        BarcodeFonts bcf = new BarcodeFonts();
+        bcf.BarcodeType = BarcodeFonts.BarcodeEnum.Code39;
+        bcf.CheckDigit = BarcodeFonts.YesNoEnum.Yes;
+        bcf.Data = ItemID;
+        bcf.encode();
+        barcode = bcf.EncodedData;
+        Console.WriteLine(ItemID);
     }
 }

@@ -21,7 +21,6 @@ c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0
 c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\scopedcss\bundle\Wardrobe.styles.css
 c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\scopedcss\projectbundle\Wardrobe.bundle.scp.css
-c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\compressed\jxyh6stzrc-khy4lop6wu.gz
 c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\compressed\adpiz65an5-bqjiyaj88i.gz
 c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\compressed\fgllpzi7a3-c2jlpeoesf.gz
 c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\compressed\snv0eu1f6a-erw9l3u2r3.gz
@@ -75,5 +74,11 @@ c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0
 c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\Wardrobe.pdb
 c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\Wardrobe.genruntimeconfig.cache
 c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\ref\Wardrobe.dll
+c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\bin\Debug\net9.0\NETStandardBarcode.dll
+c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\Wardrobe.csproj.AssemblyReference.cache
+c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\Wardrobe.csproj.Up2Date
+c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\compressed\zkd4rwjvs8-xoqtegif96.gz
+c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\compressed\3jpkzv1zmw-d5z3h9byav.gz
+c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\compressed\jxyh6stzrc-0cfrwb62zx.gz
 c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\compressed\axjmp9i9dn-mc6l1q9fru.gz
 c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\compressed\5k1bzi6wyy-mc6l1q9fru.gz

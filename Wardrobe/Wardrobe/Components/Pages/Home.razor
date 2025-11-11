@@ -3,19 +3,47 @@
 
 <PageTitle>Wardrobe</PageTitle>
 
-<h1>Wardrobe</h1>
+<p class="title"><b>Wardrobe</b></p>
+<hr/>
+<br/>
+<p>The inventory tracking system for OU's Career Closet</p>
 
 <!--TODO-->
 <!--
     Frontend design / aesthetics
     Explanation of how to use?
     Button to download the database as a .csv? (also accessible simply from knowing where it is but this is probably easier for people anyway)
-
-
 -->
+
+
 @if (!Shared.dbStatus.Equals("initialized")) {
     InitDB();
 }
+
+<style>
+
+hr {
+    border-top: 5px solid #000;
+    opacity: 1;
+    width: 80%;
+    margin: auto;
+}
+
+.title {
+    font-size: 70px;
+    font-family: 'Courier New', monospace;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Courier New', monospace;
+}
+
+.content {
+    text-align: center;
+}
+
+</style>
 
 @code {
     public void InitDB() {

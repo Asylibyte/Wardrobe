@@ -3,7 +3,9 @@
 
 <PageTitle>Checkout</PageTitle>
 
-<h1>Checkout</h1>
+<p class="title"><b>Checkout</b></p>
+<hr/>
+<br/>
 
 <!--TODO-->
 <!--
@@ -17,13 +19,70 @@
                 refresh checkout page
                 display alert "Checkout successful!"        
 -->
+<div>
+    <table>
+        <tr>
+            <th>Item Number</th>
+            <th>Item Type</th>
+            <th>Item Size</th>
+            <th>Item Gender</th>
+        </tr>
+        @foreach (ClothingItem item in checkoutList) {
+            <tr>
+                <td>@item.GetInterval()</td>
+                <td>@item.GetItemType()</td>
+                <td>@item.GetItemSize()</td>
+                <td>@item.GetItemGender()</td>
+            </tr>
+        }
+    </table>
+</div>
+<button class="btn btn-primary" @onclick="ProcessCheckout">Checkout</button>
+
+<style>
+
+hr {
+    border-top: 5px solid #000;
+    opacity: 1;
+    width: 80%;
+    margin: auto;
+}
+
+.title {
+    font-size: 70px;
+    font-family: 'Courier New', monospace;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Courier New', monospace;
+}
+
+.content {
+    text-align: center;
+}
+
+</style>
 
 @code {
 /** TODO
     
     async func waitForCard() { wait for soonercard; }
 
-    async func waitForScan() { wait for barcodeto be scanned; }
+    async func waitForScan() { wait for barcode to be scanned; }
     
 **/
+    List<ClothingItem> checkoutList = new();
+    //wait for scan
+    //on scan:
+        //parse barcode data into id
+        //find item with given id #
+        //add item to checkoutList
+
+    public void ProcessCheckout() {
+        // for each item in checkoutlist
+            // change isInStock from true to false
+            // clear list
+            // reload page
+    }
 }

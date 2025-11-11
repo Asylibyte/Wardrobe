@@ -1,3 +1,8 @@
+using System.CodeDom.Compiler;
+using Net.ConnectCode.Barcode;
+using System.Windows;
+using System.ComponentModel.DataAnnotations;
+
 /** File for all of the logic that is accessed by multiple pages */
 public static class Shared {
     public static string dbStatus = "null";
@@ -37,9 +42,11 @@ public static class Shared {
             Console.WriteLine(exception.Message);
         }
     }
-    
-    public static void AddNewItem(string itemtype, string itemsize, string itemgender) {
-        try {
+
+    public static string AddNewItem(string itemtype, string itemsize, string itemgender)
+    {
+        try
+        {
             DateTime timestamp = DateTime.Now;
             TimeSpan interval = DateTime.UnixEpoch - timestamp;
             int intervalAsSeconds = (int)(interval.TotalSeconds);
@@ -49,9 +56,13 @@ public static class Shared {
             stream.Write(line);
             stream.Flush();
             stream.Close();
-        } catch (Exception exception) {
+            return timestamp.ToString();
+        }
+        catch (Exception exception)
+        {
             Console.WriteLine(exception.Message);
         }
+        return "";
     }
 }
 

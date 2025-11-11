@@ -1,11 +1,36 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "NETStandardBarcode/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NETStandardBarcode.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NETStandardBarcode.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "NETStandardBarcode/1.0.2": {
+      "sha512": "LaV4LcRzM5740pdpM4Z0mdmClzTWPNNUQydAgwQ7yWvSNIypEX7ZnpMIJUT2wJ6XfF0Kg/bDsFnKNar4k7Keag==",
+      "type": "package",
+      "path": "netstandardbarcode/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/NETStandardBarcode.dll",
+        "netstandardbarcode.1.0.2.nupkg.sha512",
+        "netstandardbarcode.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "NETStandardBarcode >= 1.0.2"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Admin\\.nuget\\packages\\": {}
@@ -49,6 +74,12 @@
     "frameworks": {
       "net9.0": {
         "targetAlias": "net9.0",
+        "dependencies": {
+          "NETStandardBarcode": {
+            "target": "Package",
+            "version": "[1.0.2, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
