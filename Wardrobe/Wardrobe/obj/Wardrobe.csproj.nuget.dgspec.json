@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Admin\\Documents\\SoftwareDev\\Wardrobe\\Wardrobe\\Wardrobe\\Wardrobe.csproj": {}
+    "C:\\Users\\Admin\\Documents\\SoftwareDev\\Wardrobe\\Wardrobe\\Wardrobe\\Wardrobe.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Admin\\Documents\\SoftwareDev\\Wardrobe\\Wardrobe\\Wardrobe\\Wardrobe.csproj": {
+    "C:\\Users\\Admin\\Documents\\SoftwareDev\\Wardrobe\\Wardrobe\\Wardrobe\\Wardrobe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Admin\\Documents\\SoftwareDev\\Wardrobe\\Wardrobe\\Wardrobe\\Wardrobe.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\SoftwareDev\\Wardrobe\\Wardrobe\\Wardrobe\\Wardrobe.csproj",
         "projectName": "Wardrobe",
-        "projectPath": "c:\\Users\\Admin\\Documents\\SoftwareDev\\Wardrobe\\Wardrobe\\Wardrobe\\Wardrobe.csproj",
+        "projectPath": "C:\\Users\\Admin\\Documents\\SoftwareDev\\Wardrobe\\Wardrobe\\Wardrobe\\Wardrobe.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Admin\\Documents\\SoftwareDev\\Wardrobe\\Wardrobe\\Wardrobe\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\SoftwareDev\\Wardrobe\\Wardrobe\\Wardrobe\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"

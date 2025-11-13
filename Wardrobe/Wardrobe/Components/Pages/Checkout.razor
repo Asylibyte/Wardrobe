@@ -81,21 +81,13 @@ table {
 </style>
 
 @code {
-/** TODO
-    
-    async func waitForCard() { wait for soonercard; }
-
-    async func waitForScan() { wait for barcode to be scanned; }
-    
-**/
-
     string timestamp;
     int itemNum = 1;
     
     List<ClothingItem> checkoutList = new();
     public void AddItem() {
         Console.WriteLine(timestamp);
-        if (checkoutList.Capacity < 4) {
+        if (checkoutList.Count < 4) {
             ClothingItem item = Shared.fileList.FirstOrDefault(s=>s.GetTimestamp().Equals(timestamp));
             checkoutList.Add(item);
         } else {
@@ -106,9 +98,9 @@ table {
     }
 
     public void ProcessCheckout() {
-        // for each item in checkoutlist
-            // change isInStock from true to false
-            // clear list
-            // reload page
+        Shared.UpdateDB(checkoutList);
+        checkoutList.Clear();
+        itemNum = 1;
+        timestamp = "";
     }
 }

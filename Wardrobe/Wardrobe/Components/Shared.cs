@@ -6,8 +6,8 @@ using System.ComponentModel.DataAnnotations;
 /** File for all of the logic that is accessed by multiple pages */
 public static class Shared {
     public static string dbStatus = "null";
-    public static Dictionary<int, List<ClothingItem>> dict = new Dictionary<int, List<ClothingItem>>();
     public static List<ClothingItem> fileList = new List<ClothingItem>();
+    public const string DATABASE_HEADER = "Timestamp,ItemType,ItemSize,ItemGender,IsInStock\n";
 
     public static void CheckDatabase() {
         string pathToDB = @"..\..\Database\Database.csv";
@@ -47,7 +47,7 @@ public static class Shared {
     {
         try
         {
-            string line = $"{itemID},{itemtype},{itemsize},{itemgender},{true}\n";
+            string line = $"{itemID},{itemtype},{itemsize},{itemgender},true\n";
             Shared.fileList.Add(new ClothingItem(line));
             var stream = new StreamWriter(@"..\..\Database\Database.csv", append: true);
             stream.Write(line);
@@ -56,6 +56,27 @@ public static class Shared {
         }
         catch (Exception exception)
         {
+            Console.WriteLine(exception.Message);
+        }
+    }
+
+    public static void UpdateDB(List<ClothingItem> list) {
+        try {
+            foreach (ClothingItem item in list) {
+                var index = fileList.IndexOf(fileList.First(s=>s.GetTimestamp().Equals(item.GetTimestamp())));
+                Console.WriteLine(index);
+                fileList[index].CheckOutItem();
+            }
+
+            var stream = new StreamWriter(@"..\..\Database\Database.csv");
+            stream.Write(DATABASE_HEADER);
+            foreach (ClothingItem item in fileList) {
+                stream.Write(item.ToString()+"\n");
+            }
+            stream.Flush();
+            stream.Close();
+
+        } catch (Exception exception) {
             Console.WriteLine(exception.Message);
         }
     }
@@ -86,12 +107,12 @@ public class ClothingItem {
     }
 
     public string GetTimestamp() { return column1; }
-
     public string GetItemType() { return column2; }
-
     public string GetItemSize() { return column3; }
     public string GetItemGender() { return column4; }
     public string GetStatus() { return column5; }
+
+    public void CheckOutItem() { column5 = "false"; }
 
     public override string ToString() {
         return $"{column1}, {column2}, {column3}, {column4}, {column5}";

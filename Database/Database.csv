@@ -1,6 +1,6 @@
 Timestamp,ItemType,ItemSize,ItemGender,IsInStock
-11/11/2025175113K,Dress,XS,Womens,True
-11/11/2025175310J,Dress,XS,Womens,True
-12/11/2025133205H,Shoes,11,Mens,True
-12/11/2025232217K,Dress,16,Womens,True
-12/11/2025232234J,Pants,L,Mens,True
+11/11/2025175113K, Dress, XS, Womens, true
+11/11/2025175310J, Dress, M, Womens, true
+12/11/2025133205H, Shoes, 11, Mens, true
+12/11/2025232217K, Blouse, 16, Womens, true
+12/11/2025232234J, Pants, L, Mens, true
