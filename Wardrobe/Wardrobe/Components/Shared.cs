@@ -43,31 +43,26 @@ public static class Shared {
         }
     }
 
-    public static string AddNewItem(string itemtype, string itemsize, string itemgender)
+    public static void AddNewItem(string itemID, string itemtype, string itemsize, string itemgender)
     {
         try
         {
-            DateTime timestamp = DateTime.Now;
-            TimeSpan interval = DateTime.UnixEpoch - timestamp;
-            int intervalAsSeconds = (int)(interval.TotalSeconds);
-            string line = $"{timestamp},{itemtype},{itemsize},{itemgender},{true}\n";
+            string line = $"{itemID},{itemtype},{itemsize},{itemgender},{true}\n";
             Shared.fileList.Add(new ClothingItem(line));
             var stream = new StreamWriter(@"..\..\Database\Database.csv", append: true);
             stream.Write(line);
             stream.Flush();
             stream.Close();
-            return timestamp.ToString();
         }
         catch (Exception exception)
         {
             Console.WriteLine(exception.Message);
         }
-        return "";
     }
 }
 
 public class ClothingItem {
-    private int column1 { get; set; } // Date the item was added to Database; doubles as unqiue ID for tagging purposes
+    private string column1 { get; set; } // Date the item was added to Database; doubles as unqiue ID for tagging purposes
     private string column2 { get; set; } // Item type (i.e. dress, suit, pants, etc)
     private string column3 { get; set; } // Item size (i.e. large, XL, 14, 32w40l)
     private string column4 { get; set; } // Item gender (mens, womens, neuter)
@@ -83,15 +78,14 @@ public class ClothingItem {
                 temparray[i] = "";
             }
         }
-        column1 = (int) ((DateTime.UnixEpoch - DateTime.Parse(temparray[0])).TotalSeconds);
+        column1 = temparray[0];
         column2 = temparray[1];
         column3 = temparray[2];
         column4 = temparray[3];
         column5 = temparray[4];
     }
 
-    public int GetInterval() { return column1; }
-    public DateTime GetTimestamp() { return DateTime.UnixEpoch.AddSeconds(column1); }
+    public string GetTimestamp() { return column1; }
 
     public string GetItemType() { return column2; }
 

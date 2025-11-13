@@ -14,16 +14,18 @@
         Size (have allow for numbers and letters, also allow empty inputs)
         ...
 -->
-<label>Item Type:</label>
-<input type="text" @bind="item_type">
+<div>
+    <label>Item Type:</label>
+    <input type="text" @bind="item_type">
 
-<label>Item Size:</label>
-<input type="text" @bind="item_size">
+    <label>Item Size:</label>
+    <input type="text" @bind="item_size">
 
-<label>Item Gender:</label>
-<input type="text" @bind="item_gender">
+    <label>Item Gender:</label>
+    <input type="text" @bind="item_gender">
 
-<button class="btn btn-primary" @onclick="DataSubmission">Submit</button>
+    <button class="btn btn-primary" @onclick="DataSubmission">Submit</button>
+</div>
 
 <label class="barcode">@barcode</label>
 
@@ -52,7 +54,7 @@ p {
 .barcode {
     font-weight: normal;
     font-family: 'BarCode39-Z7DZ', 'Comic Sans MS';
-    font-size: 32px
+    font-size: 50px;
     font-stretch: condensed;
 }
 </style>
@@ -76,15 +78,17 @@ p {
     private string barcode = "";
 
     public void DataSubmission() {
-        // Submit data to database
-        // Print tag for item, look at API for whatever printer team decides to use
-        string ItemID = Shared.AddNewItem(item_type,item_size,item_gender);
+        string timestamp = DateTime.Now.ToString();
         BarcodeFonts bcf = new BarcodeFonts();
         bcf.BarcodeType = BarcodeFonts.BarcodeEnum.Code39;
         bcf.CheckDigit = BarcodeFonts.YesNoEnum.Yes;
-        bcf.Data = ItemID;
+        bcf.Data = timestamp;
         bcf.encode();
         barcode = bcf.EncodedData;
-        Console.WriteLine(ItemID);
+        string itemID = bcf.EncodedData;
+        itemID = itemID.Trim( new char[] {'*'});
+        itemID = itemID.Remove(10,1);
+        Shared.AddNewItem(itemID,item_type,item_size,item_gender);
+        Console.WriteLine(itemID);
     }
 }
