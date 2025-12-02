@@ -1,41 +1,43 @@
 Timestamp,ItemType,ItemSize,ItemGender,IsInStock
-11/11/2025175113K,Dress,XS,Womens,true
-11/11/2025175310J,Dress,M,Womens,true
-12/11/2025133205H,Shoes,11,Mens,true
-12/11/2025232217K,Blouse,16,Womens,true
-12/11/2025232234J,Pants,L,Mens,true
-13/11/2025153354P,Jacket,M,Mens,true
-13/11/2025165321M,Pants,XL,Mens,true
-26/11/2025125343Q,Suit,XL,Mens,true
-01/12/2025233203F,Pants,S,Mens,true
-02/12/2025001628K,Skirt,XS,Womens,true
-02/12/20250020049,Pants,XS,Mens,true
-02/12/2025002159K,Dress,L,Womens,true
-02/12/2025002743J,Blouse,XL,Womens,true
-02/12/2025005033E,Pants,M,Mens,true
-02/12/2025125622L,Dress,XXS,Womens,true
-02/12/2025130740I,Suit,M,Mens,true
-02/12/2025130849S,Shoes,XL,Unisex,true
-02/12/2025130942M,Tie,XXS,Unisex,true
-02/12/2025150259P,Skirt,XS,Womens,true
-02/12/2025150444L,Shoes,S,Womens,true
-02/12/2025151012D,Pants,S,Mens,true
-02/12/2025151200C,Suit,XXL,Mens,true
-02/12/2025151318M,Skirt,XXS,Womens,true
-02/12/2025151427N,Pants,M,Womens,true
-02/12/2025151555P,Tie,M,Unisex,true
-02/12/2025152144K,Pants,XL,Mens,true
-02/12/2025152229O,Blouse,S,Womens,true
-02/12/2025152528Q,Dress,L,Mens,true
-02/12/2025153115J,Pants,L,Mens,true
-02/12/2025153552O,Pants,XXL,Womens,true
-02/12/2025154330J,Tie,S,Unisex,true
-02/12/2025154705P,Skirt,L,Womens,true
-02/12/2025154829W,Blouse,XL,Womens,true
-02/12/2025160126J,Shoes,XS,Unisex,true
-02/12/2025160238N,Skirt,XL,Womens,true
-02/12/2025160508N,Skirt,XL,Womens,true
-02/12/2025160633M,Shoes,M,Womens,true
-02/12/2025161454O,Suit,S,Mens,true
-02/12/2025161601I,Tie,S,Unisex,true
-02/12/2025161711K,Shoes,M,Womens,true
+11/11/2025175113K, Dress, XS, Womens, true
+11/11/2025175310J, Dress, M, Womens, true
+12/11/2025133205H, Shoes, 11, Mens, true
+12/11/2025232217K, Blouse, 16, Womens, true
+12/11/2025232234J, Pants, L, Mens, true
+13/11/2025153354P, Jacket, M, Mens, true
+13/11/2025165321M, Pants, XL, Mens, true
+26/11/2025125343Q, Suit, XL, Mens, true
+01/12/2025233203F, Pants, S, Mens, true
+02/12/2025001628K, Skirt, XS, Womens, true
+02/12/20250020049, Pants, XS, Mens, true
+02/12/2025002159K, Dress, L, Womens, true
+02/12/2025002743J, Blouse, XL, Womens, true
+02/12/2025005033E, Pants, M, Mens, true
+02/12/2025125622L, Dress, XXS, Womens, true
+02/12/2025130740I, Suit, M, Mens, true
+02/12/2025130849S, Shoes, XL, Unisex, true
+02/12/2025130942M, Tie, XXS, Unisex, true
+02/12/2025150259P, Skirt, XS, Womens, true
+02/12/2025150444L, Shoes, S, Womens, true
+02/12/2025151012D, Pants, S, Mens, true
+02/12/2025151200C, Suit, XXL, Mens, true
+02/12/2025151318M, Skirt, XXS, Womens, true
+02/12/2025151427N, Pants, M, Womens, true
+02/12/2025151555P, Tie, M, Unisex, true
+02/12/2025152144K, Pants, XL, Mens, true
+02/12/2025152229O, Blouse, S, Womens, true
+02/12/2025152528Q, Dress, L, Mens, true
+02/12/2025153115J, Pants, L, Mens, true
+02/12/2025153552O, Pants, XXL, Womens, true
+02/12/2025154330J, Tie, S, Unisex, true
+02/12/2025154705P, Skirt, L, Womens, false
+02/12/2025154829W, Blouse, XL, Womens, true
+02/12/2025160126J, Shoes, XS, Unisex, true
+02/12/2025160238N, Skirt, XL, Womens, true
+02/12/2025160508N, Skirt, XL, Womens, true
+02/12/2025160633M, Shoes, M, Womens, true
+02/12/2025161454O, Suit, S, Mens, true
+02/12/2025161601I, Tie, S, Unisex, true
+02/12/2025161711K, Shoes, M, Womens, true
+02/12/2025165848Z, Skirt, L, Womens, true
+

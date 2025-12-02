@@ -9,30 +9,33 @@
 <br/>
  
 <div class="content">
-    <table>
-        <tr>
-            <th>Item Number</th>
-            <th>Item Type</th>
-            <th>Item Size</th>
-            <th>Item Gender</th>
-        </tr>
-        @foreach (ClothingItem item in checkoutList) {
+    @if (checkoutList.Count > 0) {
+        <table>
             <tr>
-                <td>@itemNum</td>
-                <td>@item.GetItemType()</td>
-                <td>@item.GetItemSize()</td>
-                <td>@item.GetItemGender()</td>
+                <th>Item Number</th>
+                <th>Item Type</th>
+                <th>Item Size</th>
+                <th>Item Gender</th>
             </tr>
-            itemNum++;
-        }
-    </table>
+            @foreach (ClothingItem item in checkoutList) {
+                <tr>
+                    <td>@itemNum</td>
+                    <td>@item.GetItemType()</td>
+                    <td>@item.GetItemSize()</td>
+                    <td>@item.GetItemGender()</td>
+                </tr>
+                itemNum++;
+            }
+        </table>
+    }
 </div>
 <div>
     <input @bind="timestamp" type="text" placeholder="waiting for item scan" @ref="scanBox">
     <button class="btn btn-primary" @onclick="AddItem">Add Scanned Item</button>
 </div>
-
-<button class="btn btn-primary" style="margin-top: 5%" @onclick="ProcessCheckout">Checkout</button>
+@if (checkoutList.Count > 0) {
+    <button class="btn btn-primary" style="margin-top: 5%" @onclick="ProcessCheckout">Checkout</button>
+}
 
 <style>
 
