@@ -1,7 +1,6 @@
 # Wardrobe
 
-<p><b>v1.0.0
-</b></p>
+<p><b>v1.0.1</b></p>
 
 Wardrobe is a webapp developed as part of a team solution to a class project for ENGR-1413 at OU, in partnership with the OU Career Closet, aimed at improving inventory tracking and telemetry during their events. The app is developed in C# using the Blazor framework and the built-in Bootstrap css library
 
@@ -17,7 +16,10 @@ Wardrobe is a webapp developed as part of a team solution to a class project for
 - Automatic tag printing with barcode upon adding item to database
 - Short "Tutorial" explaining how to use the app properly
 - Polish to UX / frontend aesthetics
-- Backend updates to database logic
 
 
-*README current as of 13 November, 2025*
+### Patch Notes:
+v1.0.1
+- Updated Intake page to add clothes using a dropdown menu instead of manually typing in each value
+
+*README current as of 01.12.2025*

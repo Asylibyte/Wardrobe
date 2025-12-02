@@ -1,4 +1,5 @@
 @page "/checkout"
+@using System.Threading.Tasks
 @rendermode InteractiveServer
 
 <PageTitle>Checkout</PageTitle>
@@ -39,7 +40,7 @@
     </table>
 </div>
 <div>
-    <input @bind="timestamp" type="text" placeholder="waiting for item scan">
+    <input @bind="timestamp" type="text" placeholder="waiting for item scan" @ref="scanBox">
     <button class="btn btn-primary" @onclick="AddItem">Add Scanned Item</button>
 </div>
 
@@ -83,8 +84,10 @@ table {
 @code {
     string timestamp;
     int itemNum = 1;
-    
+    private ElementReference scanBox;
+
     List<ClothingItem> checkoutList = new();
+
     public void AddItem() {
         Console.WriteLine(timestamp);
         if (checkoutList.Count < 4) {

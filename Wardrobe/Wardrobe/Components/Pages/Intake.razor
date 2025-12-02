@@ -15,14 +15,34 @@
         ...
 -->
 <div>
-    <label>Item Type:</label>
-    <input type="text" @bind="item_type">
+    <label for="type">Item Type:</label>
+    <select @bind="item_type" name="itemType" id="type">
+        <option value="Dress">Dress</option>
+        <option value="Pants">Pants</option>
+        <option value="Suit">Suit</option>
+        <option value="Blouse">Blouse</option>
+        <option value="Skirt">Skirt</option>
+        <option value="Shoes">Shoes</option>
+        <option value="Tie">Tie</option>
+    </select>
 
-    <label>Item Size:</label>
-    <input type="text" @bind="item_size">
+    <label for="size">Item Size:</label>
+    <select @bind="item_size" name="itemSize" id="size">
+        <option value="XXS">XXS</option>
+        <option value="XS">XS</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+        <option value="XXL">XXL</option>
+    </select>
 
-    <label>Item Gender:</label>
-    <input type="text" @bind="item_gender">
+    <label for="gender">Item Gender:</label>
+    <select @bind="item_gender" name="itemGender" id="gender">
+        <option value="Mens">Mens</option>
+        <option value="Womens">Womens</option>
+        <option value="Unisex">Unisex</option>
+    </select>
 
     <button class="btn btn-primary" @onclick="DataSubmission">Submit</button>
 </div>
@@ -90,5 +110,7 @@ p {
         itemID = itemID.Remove(10,1);
         Shared.AddNewItem(itemID,item_type,item_size,item_gender);
         Console.WriteLine(itemID);
+
+        
     }
 }
