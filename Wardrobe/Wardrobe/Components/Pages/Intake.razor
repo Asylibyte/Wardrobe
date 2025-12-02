@@ -1,4 +1,7 @@
 @page "/intake"
+@using PdfSharp.Drawing
+@using PdfSharp.Pdf
+@using System.Reflection.Metadata
 @rendermode InteractiveServer
 
 <PageTitle>Intake</PageTitle>
@@ -7,13 +10,6 @@
 <hr/>
 <br/>
 
-<!--TODO-->
-<!--
-    Input Fields:
-        Item type (dropdown menu?)
-        Size (have allow for numbers and letters, also allow empty inputs)
-        ...
--->
 <div>
     <label for="type">Item Type:</label>
     <select @bind="item_type" name="itemType" id="type">
@@ -47,8 +43,6 @@
     <button class="btn btn-primary" @onclick="DataSubmission">Submit</button>
 </div>
 
-<label class="barcode">@barcode</label>
-
 <style>
 hr {
     border-top: 5px solid #000;
@@ -80,17 +74,6 @@ p {
 </style>
 
 @code {
-/** TODO
-
-    func Print() {
-        Adds new item to database with input field info + timestamp + unique id
-        Create barcode from ID
-        Call printer API and print with design laid out by tagging group
-        Empty all fields and/or force page refresh
-        print alert to screen; something like "Item added successfully!" or whatever
-    }
-
-**/
 
     private string item_type = "";
     private string item_size = "";
@@ -110,7 +93,33 @@ p {
         itemID = itemID.Remove(10,1);
         Shared.AddNewItem(itemID,item_type,item_size,item_gender);
         Console.WriteLine(itemID);
-
         
+        PrintTag(itemID);
+    }
+
+    public void PrintTag(string barcodeText) {
+        Bitmap image = new Bitmap(580, 300);
+
+        PrivateFontCollection collection = new PrivateFontCollection();
+        collection.AddFontFile(Path.GetFullPath(@"wwwroot\fonts\bar-code-39-font\BarCode39-Z7DZ.ttf"));
+        
+        using (Graphics g = Graphics.FromImage(image)) {
+            g.Clear(System.Drawing.Color.White);
+
+            Font tagFont = new Font("Courier New", emSize:50, FontStyle.Bold);
+            Font barcodeFont = new Font(collection.Families.First(), 40);
+
+            SolidBrush brush = new SolidBrush(System.Drawing.Color.Black);
+
+            StringFormat format = new StringFormat();
+            format.LineAlignment = StringAlignment.Center;
+            format.Alignment = StringAlignment.Center;
+
+            g.DrawString(item_gender, tagFont, brush, new PointF(290,50), format);
+            g.DrawString(item_type, tagFont, brush, new PointF(290,150), format);
+            g.DrawString(barcodeText, barcodeFont, brush, new PointF(290,240), format);
+        }
+        image.Save("barcode-test.png");
+        Console.WriteLine("success");
     }
 }

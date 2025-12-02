@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Documents\\SoftwareDev\\Wardrobe\\Wardrobe\\Wardrobe\\Wardrobe.csproj": {}
+    "c:\\Users\\Admin\\Documents\\SoftwareDev\\Wardrobe\\Wardrobe\\Wardrobe\\Wardrobe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Documents\\SoftwareDev\\Wardrobe\\Wardrobe\\Wardrobe\\Wardrobe.csproj": {
+    "c:\\Users\\Admin\\Documents\\SoftwareDev\\Wardrobe\\Wardrobe\\Wardrobe\\Wardrobe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\SoftwareDev\\Wardrobe\\Wardrobe\\Wardrobe\\Wardrobe.csproj",
+        "projectUniqueName": "c:\\Users\\Admin\\Documents\\SoftwareDev\\Wardrobe\\Wardrobe\\Wardrobe\\Wardrobe.csproj",
         "projectName": "Wardrobe",
-        "projectPath": "C:\\Users\\Admin\\Documents\\SoftwareDev\\Wardrobe\\Wardrobe\\Wardrobe\\Wardrobe.csproj",
+        "projectPath": "c:\\Users\\Admin\\Documents\\SoftwareDev\\Wardrobe\\Wardrobe\\Wardrobe\\Wardrobe.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\SoftwareDev\\Wardrobe\\Wardrobe\\Wardrobe\\obj\\",
+        "outputPath": "c:\\Users\\Admin\\Documents\\SoftwareDev\\Wardrobe\\Wardrobe\\Wardrobe\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -47,6 +47,18 @@
             "NETStandardBarcode": {
               "target": "Package",
               "version": "[1.0.2, )"
+            },
+            "PDFsharp": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "System.Text.Encoding.CodePages": {
+              "target": "Package",
+              "version": "[10.0.0, )"
             }
           },
           "imports": [
