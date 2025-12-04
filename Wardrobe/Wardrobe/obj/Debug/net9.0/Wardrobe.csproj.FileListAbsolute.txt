@@ -80,8 +80,6 @@ c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0
 c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\compressed\zkd4rwjvs8-xoqtegif96.gz
 c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\compressed\3jpkzv1zmw-d5z3h9byav.gz
 c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\compressed\jxyh6stzrc-0cfrwb62zx.gz
-c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\compressed\axjmp9i9dn-mc6l1q9fru.gz
-c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\compressed\5k1bzi6wyy-mc6l1q9fru.gz
 c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
 c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\bin\Debug\net9.0\PdfSharp.BarCodes.dll
 c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\bin\Debug\net9.0\PdfSharp.Charting.dll
@@ -98,3 +96,5 @@ c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\bin\Debug\net9.0
 c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\bin\Debug\net9.0\System.Text.Encoding.CodePages.dll
 c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\bin\Debug\net9.0\runtimes\win\lib\net9.0\Microsoft.Win32.SystemEvents.dll
 c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Text.Encoding.CodePages.dll
+c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\compressed\axjmp9i9dn-mlhegcel2d.gz
+c:\Users\Admin\Documents\SoftwareDev\Wardrobe\Wardrobe\Wardrobe\obj\Debug\net9.0\compressed\5k1bzi6wyy-mlhegcel2d.gz
